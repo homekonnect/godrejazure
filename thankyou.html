@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Thank You | Porous Living – Greenway</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ------------------------------------------------------------------
+   BASE COLORS + GLOBAL
+------------------------------------------------------------------ */
+    :root {
+      --green: #487307;
+      --gold: #f2c21a;
+    }
+
+    body {
+      background: #f7f7f7;
+      font-family: 'Lato', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ------------------------------------------------------------------
+   GOLD CONFETTI
+------------------------------------------------------------------ */
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 12px;
+      height: 12px;
+      background: var(--gold);
+      opacity: 0.9;
+      animation: confettiFall 3s linear infinite;
+      z-index: 999999;
+      border-radius: 2px;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(0) rotate(0);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    /* ------------------------------------------------------------------
+   THANK YOU BOX + GLOW
+------------------------------------------------------------------ */
+    .thank-container {
+      max-width: 700px;
+      margin: 140px auto 80px;
+      text-align: center;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 20px;
+      border: 3px solid var(--gold);
+      animation: goldGlow 3s ease-in-out infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    @keyframes goldGlow {
+      0% {
+        box-shadow: 0 0 10px rgba(242, 194, 26, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(242, 194, 26, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 0 10px rgba(242, 194, 26, 0.4);
+      }
+    }
+
+    .thank-title {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--green);
+      margin-top: 10px;
+    }
+
+    .thank-sub {
+      margin-top: 12px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 22px;
+      background: var(--green);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #5a8e21;
+      transform: translateY(-3px);
+    }
+
+    /* ------------------------------------------------------------------
+   HOME KONNECT BLOCK
+------------------------------------------------------------------ */
+    .hk-block {
+      margin-top: 40px;
+      padding: 25px;
+      border-radius: 16px;
+      background: #f5f9f1;
+      border-left: 5px solid var(--green);
+    }
+
+    /* ------------------------------------------------------------------
+   SOCIAL ICONS – FIXED ORDER + NO UNDERLINE
+------------------------------------------------------------------ */
+    .social-links {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      box-shadow: 0 0 0 2px var(--green), 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .social-links a i {
+      font-size: 24px;
+      transition: 0.3s;
+    }
+
+    /* BRAND COLORS */
+    .fa-instagram {
+      color: #C13584;
+    }
+
+    .fa-facebook-f {
+      color: #1877F2;
+    }
+
+    .fa-linkedin {
+      color: #0A66C2;
+    }
+
+    .fa-youtube {
+      color: #FF0000;
+    }
+
+    .fa-globe {
+      color: var(--gold);
+    }
+
+    /* Hover effects */
+    .social-links a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 0 3px var(--green), 0 10px 22px rgb(255, 156, 43);
+    }
+
+    .social-links a:hover i {
+      transform: scale(1.15);
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    @media(max-width:600px) {
+      .thank-title {
+        font-size: 32px;
+      }
+
+      .thank-container {
+        margin-top: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- AUTO REDIRECT AFTER 30 SECONDS -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 30000);
+  </script>
+
+  <!-- CONFETTI SPAWNER -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let c = document.createElement("div");
+      c.className = "confetti";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.animationDelay = Math.random() * 2 + "s";
+      c.style.background = ["#f2c21a", "#ffdf75", "#e6b800"][Math.floor(Math.random() * 3)];
+      document.body.appendChild(c);
+    }
+  </script>
+
+  <!-- HEADER -->
+  <header class="header sticky-header">
+    <div class="header-inner container">
+      <img src="assets/images/godrej/godrej-logo.png" class="logo" alt="Porous Greenway logo">
+      <a href="tel:+918047094598" class="glass-cta" aria-label="Call Porous Living">
+        <i class="fa-solid fa-phone-volume"></i> +91 80470 94598
+      </a>
+    </div>
+  </header>
+
+  <!-- THANK YOU BOX -->
+  <div class="thank-container">
+    <h1 class="thank-title">Thank You! 🎉</h1>
+    <p class="thank-sub">
+      Your enquiry has been successfully received.<br>
+      Our team will reach out shortly.
+    </p>
+
+    <a href="index.html" class="back-btn">⬅ Back to Website</a>
+
+    <div class="hk-block">
+      <h3>Powered by Home Konnect</h3>
+      <p>
+        Chennai’s trusted real estate advisory offering verified insights & transparent guidance for home buyers.
+      </p>
+
+      <!-- FINAL FIXED SOCIAL ORDER -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/home_konnect/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/homekonnect/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/home-konnect/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@HomeKonnect" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.homekonnect.com/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Porous Living – Greenway. All rights reserved.</footer>
+
+</body>
+
+</html>
